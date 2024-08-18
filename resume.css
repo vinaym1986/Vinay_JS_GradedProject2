@@ -1,0 +1,219 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1200px;
+    text-align: left;
+    font-size: 14px;
+    overflow-y: auto;
+}
+
+input[type="text"] {
+    padding: 8px;
+    width: calc(100% - 220px);
+    margin-right: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button-container button {
+    margin: 0 20px; 
+}
+
+#resumeDisplay {
+    display: flex;
+    flex-direction: column; 
+    margin-top: 20px;
+    width: 100%;
+}
+
+#resumeDisplay .header {
+    text-align: center;
+    background-color: #d8f0f8;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px; 
+}
+
+#resumeDisplay .resume-body {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; 
+}
+
+#resumeDisplay .sidebar {
+    background-color: cyan;
+    padding: 15px;
+    border-radius: 5px;
+    width: 20%; 
+    box-sizing: border-box;
+}
+
+#resumeDisplay .content {
+    width: 70%; /* Adjust as needed */
+    box-sizing: border-box;
+}
+
+#resumeDisplay .section {
+    margin-bottom: 20px;
+}
+
+#resumeDisplay .section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+#resumeDisplay .section p {
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+/* For small screens like smartphones (up to 600px wide) */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-container button {
+        margin: 10px 0;
+    }
+
+    #resumeDisplay .resume-body {
+        flex-direction: column;
+    }
+
+    #resumeDisplay .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #resumeDisplay .content {
+        width: 100%;
+    }
+}
+
+/* For medium screens like tablets (between 601px and 900px wide) */
+@media (min-width: 601px) and (max-width: 900px) {
+    body {
+        padding: 20px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    input[type="text"] {
+        width: calc(100% - 160px);
+    }
+
+    .button-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #resumeDisplay .resume-body {
+        flex-direction: column;
+    }
+
+    #resumeDisplay .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #resumeDisplay .content {
+        width: 100%;
+    }
+}
+
+/* For large screens (over 900px wide) */
+@media (min-width: 901px) {
+    body {
+        padding: 20px;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 1200px;
+    }
+
+    input[type="text"] {
+        width: calc(100% - 220px);
+    }
+
+    .button-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #resumeDisplay .resume-body {
+        flex-direction: row;
+    }
+
+    #resumeDisplay .sidebar {
+        width: 20%;
+    }
+
+    #resumeDisplay .content {
+        width: 70%;
+    }
+}

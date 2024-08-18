@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Viewer</title>
+    <link rel="stylesheet" href="resume.css">
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="jobSearch" placeholder="Search Job...">
+        <button type="button" onclick="filterResumes()">Search</button>
+        
+        <div id="resumeDisplay">
+            <!-- Resume details will be dynamically inserted here -->
+        </div>
+        
+         <div class="button-container">
+            <button type="button" id="prevBtn" onclick="prevResume()">Previous</button>
+            <button type="button" id="nextBtn" onclick="nextResume()">Next</button>
+        </div>
+    </div>
+
+    <script src="resume.js"></script>
+</body>
+</html>
